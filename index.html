@@ -4,66 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-
     <meta
       name="og:title"
       content="Wyatt Ferguson | https://github.com/wyattferguson"
     />
-    <meta
-      name="og:description"
-      content="A rugged, minimal framework for composing behavior directly in your markup."
-    />
-    <meta name="og:image" content="https://alpinejs.dev/social.jpg" />
+    <meta name="og:description" content="" />
+    <meta name="description" content="" />
 
-    <title>Wyatt Ferguson</title>
+    <title>Wyatt Ferguson | https://github.com/wyattferguson</title>
 
-    <meta
-      name="description"
-      content="A rugged, minimal framework for composing behavior directly in your markup."
-    />
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+      :root {
+        --orange: #ec5228;
+        --green: #98d2c0;
+        --blue: #57b4ba;
+        --grey: #2d3441;
+      }
+      html {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          Liberation Mono, Courier New, monospace;
+      }
+
+      strong {
+        font-weight: bolder;
+      }
+
+      h2 {
+        font-size: 3.75rem;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+
+      a {
+        color: var(--blue);
+      }
+
+      a:hover {
+        color: var(--orange);
+      }
+
+      .container {
+        padding: 8rem 2rem;
+        color: var(--grey);
+        width: 650px;
+      }
+
+      .github {
+        width: 50px;
+      }
+      .group {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .green {
+        color: var(--green);
+      }
+
+      .red {
+        color: var(--orange);
+      }
+
+      .blue {
+        color: var(--blue);
+      }
+    </style>
   </head>
   <body>
-    <nav
-      class="absolute flex w-full items-center justify-end gap-4 px-6 py-4 font-medium text-gray-800"
-    >
-      <a
-        href="https://github.com/wyattferguson"
-        class="block hover:text-gray-600"
-        target="_blank"
-        ><svg
-          class="h-5 w-5 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <title>GitHub</title>
-          <path
-            d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0"
-          ></path></svg
-      ></a>
-    </nav>
-
-    <div
-      x-data="{
-            currentStep: 'first',
-            steps: { first: ['Project 1'], second: ['Project 2'], third: ['Project 3'] },
-            direction: 'right' }
-        "
-    >
-      <div class="px-8 pt-32 text-gray-800 md:w-[650px]">
-        <div class="font-title space-y-2">
-          <h2 class="text-6xl font-extrabold">hello.</h2>
-          <h2 class="text-6xl font-extrabold">wyatt ferguson.</h2>
-          <h2 class="text-6xl font-extrabold">#python #rust #opensource</h2>
+    <div class="container">
+      <div class="intro">
+        <div class="group">
+          <h2><strong>></strong>hello</h2>
+          <h2><strong>></strong>whoami</h2>
+          <h2>wyatt ferguson</h2>
+          <h2>
+            <span class="green">#python</span> <span class="red">#rust</span>
+            <span class="blue">#opensource</span>
+          </h2>
         </div>
 
-        <div class="space-y-6 pt-16 text-xl">
+        <div class="group">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
             venenatis lorem, et lobortis justo. Sed vitae mi sed dolor finibus
@@ -76,9 +103,20 @@
             finibus tincidunt tempus sit amet orci. Aenean vitae dictum ante,
             vel ultricies leo.
           </p>
+
+          <p>
+            <strong>> github</strong>
+            <a href="https://github.com/wyattferguson"
+              >https://github.com/wyattferguson</a
+            >
+          </p>
+          <p>
+            <strong>> bsky</strong>
+            <a href="https://wyattf.bsky.social">https://wyattf.bsky.social</a>
+          </p>
         </div>
 
-        <div class="flex justify-center space-x-2 pt-16">
+        <!-- <div class="flex justify-center space-x-2 pt-16">
           <template x-for="([name], key) in steps" hidden>
             <button
               class="px-3 py-1 ring-gray-800 focus:outline-none focus:ring-1"
@@ -88,10 +126,10 @@
               <strong x-text="name"></strong>
             </button>
           </template>
-        </div>
+        </div> -->
       </div>
 
-      <div
+      <!-- <div
         class="relative m-auto px-8 text-gray-800 md:overflow-hidden"
         x-data="{ expanded: true }"
         x-bind:class="expanded || 'h-[450px]'"
@@ -150,7 +188,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
