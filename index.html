@@ -4,22 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="og:title"
-      content="Wyatt Ferguson | https://github.com/wyattferguson"
-    />
+    <meta name="og:title" content="Wyatt Ferguson | github.com/wyattferguson" />
     <meta name="og:description" content="" />
     <meta name="description" content="" />
 
-    <title>Wyatt Ferguson | https://github.com/wyattferguson</title>
+    <title>Wyatt Ferguson | github.com/wyattferguson</title>
 
     <style>
       :root {
         --orange: #ec5228;
-        --green: #98d2c0;
+        --green: #a6da95;
         --blue: #57b4ba;
         --grey: #2d3441;
         --pink: #ea76cb;
+        --peach: #fab387;
       }
       html {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -38,6 +36,12 @@
         font-weight: 800;
       }
 
+      h3 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin: 0;
+      }
+
       p {
         font-size: 1.25rem;
         line-height: 1.75rem;
@@ -54,7 +58,7 @@
       .container {
         padding: 8rem 2rem;
         color: var(--grey);
-        width: 650px;
+        width: 700px;
       }
 
       .github {
@@ -91,7 +95,7 @@
           });
         }
 
-        getIPAddress();
+        //getIPAddress();
       });
     </script>
   </head>
@@ -99,46 +103,47 @@
     <div class="container">
       <div class="intro">
         <div class="group">
-          <h2><strong>></strong>hello</h2>
-          <h2 id="ip-address">127.0.0.1</h2>
+          <h3><strong>></strong>hello</h3>
+          <p id="ip-address">127.0.0.1</p>
         </div>
         <div class="group">
-          <h2><strong>></strong>whoami</h2>
-          <h2>wyatt ferguson</h2>
-          <h2>
-            <span class="green">#python</span> <span class="red">#rust</span>
-            <span class="blue">#opensource</span>
-          </h2>
-        </div>
-
-        <div class="group">
+          <h3><strong>></strong>whoami</h3>
+          <p><strong>wyatt ferguson</strong></p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id
             venenatis lorem, et lobortis justo. Sed vitae mi sed dolor finibus
             tincidunt tempus sit amet orci. Aenean vitae dictum ante, vel
             ultricies leo.
           </p>
+          <p>
+            <span class="green">#python</span> <span class="red">#rust</span>
+            <span class="blue">#opensource</span>
+          </p>
+        </div>
 
-          <h2>>projects.im/proudof</h2>
+        <div class="group">
+          <h3>>projects.im/proudof</h3>
           <p>
             Lorem ipsum dolor sit amet, <strong>Super duper text</strong> elit.
             Duis id venenatis lorem, et lobortis justo. Sed vitae mi sed dolor
             finibus tincidunt tempus sit amet orci. Aenean vitae dictum ante,
             vel ultricies leo.
           </p>
-          <h2>>stalk --me</h2>
+        </div>
+        <div class="group">
+          <h3>>stalk --me</h3>
           <p>
-            <strong>> github</strong>
+            <strong> github</strong>
             <a href="https://github.com/wyattferguson"
               >https://github.com/wyattferguson</a
             >
           </p>
           <p>
-            <strong>> bsky</strong>
+            <strong> bsky</strong>
             <a href="https://wyattf.bsky.social">https://wyattf.bsky.social</a>
           </p>
           <p>
-            <strong>> email</strong>
+            <strong> email</strong>
             <a href="mailto:wyattxdev@duck.com">wyattxdev@duck.com</a>
           </p>
         </div>
