@@ -19,6 +19,7 @@
         --green: #98d2c0;
         --blue: #57b4ba;
         --grey: #2d3441;
+        --pink: #ea76cb;
       }
       html {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -75,13 +76,33 @@
       .blue {
         color: var(--blue);
       }
+
+      #ip-address {
+        color: var(--pink);
+      }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Get the visitor's IP address
+        function getIPAddress() {
+          $.getJSON("https://api.ipify.org?format=json", function (data) {
+            $("#ip-address").text(data.ip);
+          });
+        }
+
+        getIPAddress();
+      });
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="intro">
         <div class="group">
           <h2><strong>></strong>hello</h2>
+          <h2 id="ip-address">127.0.0.1</h2>
+        </div>
+        <div class="group">
           <h2><strong>></strong>whoami</h2>
           <h2>wyatt ferguson</h2>
           <h2>
@@ -97,13 +118,15 @@
             tincidunt tempus sit amet orci. Aenean vitae dictum ante, vel
             ultricies leo.
           </p>
+
+          <h2>>projects.im/proudof</h2>
           <p>
             Lorem ipsum dolor sit amet, <strong>Super duper text</strong> elit.
             Duis id venenatis lorem, et lobortis justo. Sed vitae mi sed dolor
             finibus tincidunt tempus sit amet orci. Aenean vitae dictum ante,
             vel ultricies leo.
           </p>
-
+          <h2>>stalk --me</h2>
           <p>
             <strong>> github</strong>
             <a href="https://github.com/wyattferguson"
